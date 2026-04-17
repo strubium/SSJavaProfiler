@@ -16,12 +16,11 @@ package com.strubium.ssjprofiler;
  */
 public class Profiler {
 
-
     private long startNS = 0;
     private long endNS = 0;
     private long differenceNS = 0;
     private long differenceMS = 0;
-    private String name = null;
+    private final String name;
 
 
     /**
@@ -34,7 +33,6 @@ public class Profiler {
         this.name = name;
         ProfilerGlobal.INSTANCES.add(this);
     }
-
 
     /**
      * Starts the profiler
